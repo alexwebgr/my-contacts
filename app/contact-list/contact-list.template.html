@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-md-12" ng-repeat="(key, value) in $ctrl.contacts">
+        <a href="#!/contact-list/{{key}}" class="thumbnail">
+            <img ng-src="{{value.avatar}}" alt="avatar" class="pull-left" width="100">
+            <div class="aw-contact-body">
+                <h3>{{value.name}}</h3>
+                <p>{{value.email}}</p>
+            </div>
+            <span class="clearfix"></span>
+        </a>
+    </div>
+</div>
