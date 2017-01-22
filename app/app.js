@@ -7,6 +7,7 @@ angular.module('app', [
   'ui.router',
   'app.contactList',
   'app.contactDetail',
+  'app.addContact',
   'app.common',
   'app.common.contact'
 ])

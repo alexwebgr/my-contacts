@@ -1,10 +1,18 @@
 <div class="row">
-    <div class="col-md-12" ng-repeat="(key, value) in $ctrl.contacts">
-        <a href="#!/contact-list/{{key}}" class="thumbnail">
-            <img ng-src="{{value.avatar}}" alt="avatar" class="pull-left" width="100">
+    <div class="col-md-12">
+        <a href="#!/add-contact" class="btn btn-default">Add New Contact</a>
+        <a href="form.php?action=importContacts" class="btn btn-default">Import Contacts</a>
+        <a href="form.php?action=exportContacts" class="btn btn-default">Export Contacts</a>
+        <a href="form.php?action=deleteContacts" class="btn btn-danger">Delete All Contacts</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12" ng-repeat="contact in $ctrl.contacts">
+        <a href="#!/contact-list/{{contact.id}}" class="thumbnail">
+            <img ng-src="{{contact.avatar}}" alt="avatar" class="pull-left" width="100">
             <div class="aw-contact-body">
-                <h3>{{value.name}}</h3>
-                <p>{{value.email}}</p>
+                <h3>{{contact.name}}</h3>
+                <p>{{contact.email}}</p>
             </div>
             <span class="clearfix"></span>
         </a>
