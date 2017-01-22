@@ -1,12 +1,11 @@
 {
-  "name": "angular-seed",
+  "name": "my-contacts",
   "private": true,
-  "version": "0.0.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "version": "1.0.0",
+  "description": "An application for managing contacts",
+  "repository": "https://github.com/alexwebgr/aw_contacts",
   "license": "MIT",
   "devDependencies": {
-    "http-server": "^0.9.0",
     "jasmine-core": "^2.4.1",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^0.2.3",
@@ -20,9 +19,6 @@
 
     "update-deps": "npm update",
     "postupdate-deps": "bower update",
-
-    "prestart": "npm install",
-    "start": "http-server -a localhost -p 8000 -c-1 ./app",
 
     "pretest": "npm install",
     "test": "karma start karma.conf.js",

@@ -4,7 +4,6 @@
 angular.module('app', [
   'ngRoute',
   'ngResource',
-  'ui.router',
   'app.contactList',
   'app.contactDetail',
   'app.addContact',
