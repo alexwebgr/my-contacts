@@ -4,13 +4,14 @@ angular.module('app.addContact')
 
   .component('addContact', {
     templateUrl: 'add-contact/add-contact.template.html',
-    controller: function addContactComponent($scope, Contact, $location) {
-      $scope.contact = new Contact();
+    controller: function addContactComponent(Contact, $location) {
+      var self = this;
+      self.contact = new Contact();
 
-      $scope.submitForm = function () {
-        $scope.contact.action = 'addContact';
+      self.submitForm = function () {
+        self.contact.action = 'addContact';
 
-        $scope.contact.$save($scope.contact, function () {
+        self.contact.$save(self.contact, function () {
           $location.url('contact-list');
         });
       }

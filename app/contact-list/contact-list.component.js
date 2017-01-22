@@ -5,6 +5,7 @@ angular.module('app.contactList')
   .component('contactList', {
     templateUrl: 'contact-list/contact-list.template.html',
     controller: function contactListComponent(Contact) {
-      this.contacts = Contact.query();
+      var self = this;
+      self.contacts = Contact.query();
     }
   });

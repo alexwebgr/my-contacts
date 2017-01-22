@@ -5,6 +5,7 @@ angular.module('app.contactDetail')
   .component('contactDetail', {
     templateUrl: 'contact-detail/contact-detail.template.html',
     controller: function contactListComponent($routeParams, Contact) {
-      this.contact = Contact.get({contactId: $routeParams.contactId});
+      var self = this;
+      self.contact = Contact.get({contactId: $routeParams.contactId});
     }
   });
