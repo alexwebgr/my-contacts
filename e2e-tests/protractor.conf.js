@@ -3,9 +3,10 @@ exports.config = {
 
   allScriptsTimeout: 11000,
 
-  specs: [
-    '*.js'
-  ],
+  suites: {
+    contactList: 'spec/contact-list/*.spec.js',
+    addContact: 'spec/add-contact/*.spec.js'
+  },
 
   capabilities: {
     'browserName': 'chrome'
