@@ -77,9 +77,34 @@ function importContacts() {
 }
 
 function deleteContacts() {
-    $filename = "data/contacts.json";
+    $baseDir = "data/";
+    $filename = $baseDir . "contacts.json";
+    $aResponse = [];
 
-    file_put_contents($filename, json_encode([]));
+    if(file_put_contents($filename, json_encode([]))) {
+        $aResponse["contacts"]["success"] = true;
+        $aResponse["contacts"]["message"] = "main file deleted";
+    } else {
+        $aResponse["contacts"]["success"] = false;
+        $aResponse["contacts"]["message"] = "main file not deleted";
+    }
+
+    if ($handle = opendir('data')) {
+        while (false !== ($entry = readdir($handle))) {
+            if ($entry !== "." && $entry !== ".." && $entry !== "contacts.json" && $entry !== "58088826100000e9232b75b0.json") {
+                if (unlink($baseDir . $entry)) {
+                    $aResponse[$entry]["success"] = true;
+                    $aResponse[$entry]["message"] = "file deleted " . $entry;
+                } else {
+                    $aResponse[$entry]["success"] = false;
+                    $aResponse[$entry]["message"] = "file not deleted " . $entry;
+                }
+            }
+        }
+        closedir($handle);
+    }
+
+    echo json_encode($aResponse);
 
     header("Location: /");
 }
