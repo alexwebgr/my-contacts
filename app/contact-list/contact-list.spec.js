@@ -9,7 +9,7 @@ describe('app.contactList module', function () {
 
   beforeEach(inject(function($componentController, _$httpBackend_) {
     $httpBackend = _$httpBackend_;
-    $httpBackend.expectGET('data/contacts.json')
+    $httpBackend.expectGET(/data\/contacts(.+)/)
       .respond([{name: 'alex'}, {name: 'john'}]);
 
     ctrl = $componentController('contactList');
