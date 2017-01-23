@@ -29,4 +29,4 @@ you should be able to see the contact list.
 From the command line with `npm test`
 
 ### Run the e2e tests
-From the command line the first time you can run  `npm run protractor-first` in order to install webd `npm run protractor`
+From the command line the first time you can run  `npm run protractor-first` in order to install webdriver as well and then just `npm run protractor`
