@@ -28,4 +28,4 @@ you should be able to see the contact list.
 From the command line with `npm test`
 
 ### Run the e2e tests
-From the command line atart the selenium server `/var/www/aw_contacts/node_modules/.bin/webdriver-manager start` and then ` /var/www/aw_contacts/node_modules/.bin/protractor e2e-tests/protractor.conf.js`
+From the command line atart the selenium server `node_modules/.bin/webdriver-manager start` and then `node_modules/.bin/protractor e2e-tests/protractor.conf.js`

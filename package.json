@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "description": "An application for managing contacts",
-  "repository": "https://github.com/alexwebgr/aw_contacts",
+  "repository": "https://github.com/alexwebgr/my-contacts",
   "license": "MIT",
   "devDependencies": {
     "jasmine-core": "^2.4.1",
