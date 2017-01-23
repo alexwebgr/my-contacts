@@ -9,11 +9,11 @@ Features
 - Delete
 
 ### Run locally
-The following instructions are Ubuntu but similar actions are needed in all operating systems. 
+The following instructions are for Ubuntu but similar actions are needed for all operating systems. 
  
 In order to run locally you will need to 
 - clone the repo 
-- run npm install (assuming node, npm and bower are already installed) 
+- run `npm install` (assuming node, npm and bower are already installed) 
 - a web server like apache
 - php
 - mod_php module for apache 
